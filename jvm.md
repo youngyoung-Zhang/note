@@ -28,6 +28,18 @@
 
 **-XX:+PrintTenuringDistribution**
 
+**-XX:TargetSurvivorRatio**
+
+Survivor区对象使用率80%，默认是50%
+
+**-XX:-UseAdaptiveSizePolicy**
+
+> JDK 1.8 默认使用 UseParallelGC 垃圾回收器，该垃圾回收器默认启动了 AdaptiveSizePolicy
+
+[AdaptiveSizePolicy实战]: https://www.jianshu.com/p/7414fd6862c5	"AdaptiveSizePolicy实战"
+
+ 禁用Survivor区自适应策略
+
 ## jvm调优
 
 - 如果survivor空间太小，复制集合将直接溢出到老年代中。如果survivor空间太大，它们将是空的。在每个GC中，JVM在对象被保留（称为保留阈值）之前确定它可以被复制的次数。选择此阈值可使survivor空间**保持半满**。
