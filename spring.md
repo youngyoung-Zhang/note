@@ -12,7 +12,7 @@
 
 ## beanFactory和Applicationcontext
 
-![1589163662870](C:\Users\User\AppData\Roaming\Typora\typora-user-images\1589163662870.png)
+![1589163662870](https://github.com/youngyoung-Zhang/imagesOfmd/blob/master/1589163662870.png?raw=true)
 
 ## beanFactory和FactoryBean
 
