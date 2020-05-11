@@ -1,0 +1,27 @@
+# spring
+
+## 前言
+
+
+
+## Applicatincontext
+
+
+
+## beanFactory
+
+## beanFactory和Applicationcontext
+
+![1589163662870](C:\Users\User\AppData\Roaming\Typora\typora-user-images\1589163662870.png)
+
+## beanFactory和FactoryBean
+
+## spring的processor
+
+## ioc容器的实现
+
+### springbean的创建
+
+### 循环依赖
+
+## aop的实现
