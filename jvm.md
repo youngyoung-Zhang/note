@@ -10,7 +10,7 @@
 
 翻译：
 
-> SurvivorRatio参数控制两个幸存者空间的大小。例如，-XX:survivor ratio=6将每个幸存者空间与伊甸园的比率设置为1:6，每个幸存者空间将是年轻一代的八分之一。Solaris的默认值是32。如果幸存者空间太小，复制集合将直接溢出到旧代中。如果幸存者空间太大，它们将是空的。在每个GC中，JVM在对象被保留（称为保留阈值）之前确定它可以被复制的次数。选择此阈值可使幸存者空间保持半满。使用选项-XX:+PrintTenuringDistribution显示新一代对象的阈值和年龄。它有助于观察应用程序的生存期分布。
+> SurvivorRatio参数控制两个幸存者空间的大小。例如，-XX:survivor ratio=6将每个幸存者空间与伊甸园的比率设置为1:6，每个幸存者空间将是年轻一代的八分之一。Solaris的默认值是32。如果survivor空间太小，复制集合将直接溢出到老年代中。如果survivor空间太大，它们将是空的。在每个GC中，JVM在对象被保留（称为保留阈值）之前确定它可以被复制的次数。选择此阈值可使survivor空间**保持半满**。使用选项-XX:+PrintTenuringDistribution显示新一代对象的阈值和年龄。它有助于观察应用程序的生存期分布。
 
 ```bash
 例：-XX:survivor ratio=6
@@ -18,3 +18,17 @@
 新生代又分为 eden和survivor区 将survivor ratio的值设置为6的意思是eden和每个survivor区的比值为6：1所以整个新生代的比值为6:1:1
 ```
 
+**-XX:+PrintGCDetails -Xloggc:gc.log**
+
+ **-XX:+HeapDumpOnOutOfMemoryError** 
+
+ **-XX:HeapDumpPath=/usr/local/app/oom**
+
+**-XX:HandlePromotionFailure**
+
+**-XX:+PrintTenuringDistribution**
+
+## jvm调优
+
+- 如果survivor空间太小，复制集合将直接溢出到老年代中。如果survivor空间太大，它们将是空的。在每个GC中，JVM在对象被保留（称为保留阈值）之前确定它可以被复制的次数。选择此阈值可使survivor空间**保持半满**。
+- 
